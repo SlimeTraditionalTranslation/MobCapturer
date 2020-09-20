@@ -1,22 +1,20 @@
-# MobCapturer
-MobCapturer is a [Slimefun4](https://github.com/TheBusyBiscuit/Slimefun4/) Addon.<br>
-You need to install Slimefun4 in order for this plugin to work.
+# 生物捕捉器
+黏液科技的附加 繁體翻譯版
 
-MobCapturer is a Slimefun4 Addon that adds a cannon which allows you to capture mobs.<br>
-This Plugin is heavily inspired by the Safari-Nets from the mod [MineFactory Reloaded](https://www.curseforge.com/minecraft/mc-mods/minefactory-reloaded).
+此附加靈感來自[MineFactory Reloaded](https://www.curseforge.com/minecraft/mc-mods/minefactory-reloaded)中的捕捉球.
 
-To capture a Mob, simply craft a Mob Capturing Cannon and some Mob Capturing Pellets.<br>
-Take aim and shoot at any mob.
+來捕捉生物, 簡單合成生物捕捉槍與一些生物捕捉球.<br>
+瞄準發射任何生物.
 
-Currently only some mobs are actually compatible with this Plugin.<br>
-But the mobs that do work work extremely well!<br>
-The captured mobs will retain attributes, potion effects, fire ticks, custom names, their health and even entity-specific traits like wool colors and much more.
+目前只有一些生物實際與此附加兼容.<br>
+但是生物還是能運作得非常好!<br>
+被捕捉的生物將保留屬性,藥水效果,燃燒狀態,自訂名稱,它們的血量, 甚至特定生物特徵,例如羊毛顏色等等.
 
-[Read more...](https://github.com/TheBusyBiscuit/Slimefun4/wiki/MobCapturer)
+[官方原碼連結](https://github.com/TheBusyBiscuit/MobCapturer)
 
-## Download MobCapturer
-You can download MobCapturer right here: [Development Builds](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master/)
-
+## 下載生物捕捉器
+下載繁體翻譯版: [點此](https://github.com/xMikux/MobCapturer/releases)<br>
+你也可以在這裡下載官方的開發版: [開發版構建](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master/)
 <p align="center">
   <a href="https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master/">
     <img src="https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master/badge.svg" alt="Build Server"/>
@@ -24,8 +22,7 @@ You can download MobCapturer right here: [Development Builds](https://thebusybis
 </p>
 
 ## Discord
-You can find Slimefun's community on Discord!
-Click the badge down below to join the server for suggestions/questions or other discussions about this plugin.
+您可以在Discord上找到官方SlimeFun社區! 點擊下面的徵標來加入伺服器.
 <p align="center">
   <a href="https://discord.gg/fsD4Bkh">
     <img src="https://img.shields.io/discord/565557184348422174?color=7289DA&label=Discord&style=for-the-badge" alt="Discord Invite"/>
