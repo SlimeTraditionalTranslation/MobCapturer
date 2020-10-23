@@ -10,7 +10,8 @@
 但是生物還是能運作得非常好!<br>
 被捕捉的生物將保留屬性,藥水效果,燃燒狀態,自訂名稱,它們的血量, 甚至特定生物特徵,例如羊毛顏色等等.
 
-[官方原碼連結](https://github.com/TheBusyBiscuit/MobCapturer)
+此為**非官方**版本, 請勿在該作者的問題追蹤內回報!
+[原作者連結](https://github.com/TheBusyBiscuit/MobCapturer)
 
 ## 下載生物捕捉器
 繁體翻譯版: [構建頁面](https://xmikux.github.io/builds/xMikux/MobCapturer/master)<br>

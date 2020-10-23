@@ -4,7 +4,7 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.Optional;
 
-import org.bstats.bukkit.Metrics;
+//import org.bstats.bukkit.Metrics;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Bat;
@@ -105,7 +105,7 @@ public class MobCapturer extends JavaPlugin implements SlimefunAddon {
     @Override
     public void onEnable() {
 
-        new Metrics(this, 6672);
+        //new Metrics(this, 6672);
 
         new PelletListener(this);
 
