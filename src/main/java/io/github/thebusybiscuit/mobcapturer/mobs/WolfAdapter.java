@@ -8,7 +8,7 @@ import org.bukkit.entity.Wolf;
 
 import com.google.gson.JsonObject;
 
-import me.mrCookieSlime.CSCoreLibPlugin.general.String.StringUtils;
+import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
 public class WolfAdapter extends AbstractTameableAdapter<Wolf> {
 
@@ -21,7 +21,7 @@ public class WolfAdapter extends AbstractTameableAdapter<Wolf> {
         List<String> lore = super.getLore(json);
 
         if (!json.get("ownerUUID").isJsonNull()) {
-            lore.add(ChatColor.GRAY + "項圈顏色: " + ChatColor.WHITE + StringUtils.format(json.get("collarColor").getAsString()));
+            lore.add(ChatColor.GRAY + "項圈顏色: " + ChatColor.WHITE + ChatUtils.humanize(json.get("collarColor").getAsString()));
             lore.add(ChatColor.GRAY + "坐著: " + ChatColor.WHITE + json.get("sitting").getAsBoolean());
         } else {
             lore.add(ChatColor.GRAY + "生氣: " + ChatColor.WHITE + json.get("angry").getAsBoolean());

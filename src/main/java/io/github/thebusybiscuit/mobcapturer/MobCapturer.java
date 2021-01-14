@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Optional;
 
 //import org.bstats.bukkit.Metrics;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Bat;
@@ -87,9 +88,10 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
+//import me.mrCookieSlime.Slimefun.cscorelib2.config.Config;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
 import me.mrCookieSlime.Slimefun.cscorelib2.skull.SkullItem;
-import net.md_5.bungee.api.ChatColor;
+//import me.mrCookieSlime.Slimefun.cscorelib2.updater.GitHubBuildsUpdater;
 
 public class MobCapturer extends JavaPlugin implements SlimefunAddon {
 
@@ -104,8 +106,12 @@ public class MobCapturer extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
-
+        //Config cfg = new Config(this);
         //new Metrics(this, 6672);
+
+        /*if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
+            new GitHubBuildsUpdater(this, getFile(), "TheBusyBiscuit/MobCapturer/master").start();
+        }*/
 
         new PelletListener(this);
 
