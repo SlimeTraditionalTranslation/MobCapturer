@@ -1,4 +1,4 @@
-# 生物捕捉器
+# :ghost: 生物捕捉器
 黏液科技的附加 繁體翻譯版
 
 此附加靈感來自[MineFactory Reloaded](https://www.curseforge.com/minecraft/mc-mods/minefactory-reloaded)中的捕捉球.
@@ -13,7 +13,7 @@
 此為**非官方**版本, 請勿在該作者的問題追蹤內回報!
 [原作者連結](https://github.com/TheBusyBiscuit/MobCapturer)
 
-## 下載生物捕捉器
+## :floppy_disk: 下載生物捕捉器
 繁體翻譯版: [構建頁面](https://xmikux.github.io/builds/xMikux/MobCapturer/master)<br>
 官方開發版: [開發版構建頁面](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master/)
 <p align="center">
@@ -22,13 +22,19 @@
   </a>
 </p>
 
-## Discord
-您可以在Discord上找到官方SlimeFun社區! 點擊下面的徵標來加入伺服器.
+## :headphones: Discord 伺服器
+你可以在Discord上找到Slimefun的社區,並與千名的其他成員建立聯繫.<br>
+Slimefun Addon社區也有自己的discord伺服器來給任何我們的專案!
+
 <p align="center">
-  <a href="https://discord.gg/fsD4Bkh">
-    <img src="https://img.shields.io/discord/565557184348422174?color=7289DA&label=Discord&style=for-the-badge" alt="Discord Invite"/>
+  <a href="https://discord.gg/slimefun">
+    <img src="https://discordapp.com/api/guilds/565557184348422174/widget.png?style=banner3" alt="Discord Invite"/>
+  </a>
+  <a href="https://discord.gg/V2cJR9ADFU">
+    <img src="https://discordapp.com/api/guilds/799294416196075572/widget.png?style=banner3" alt="Discord Invite"/>
   </a>
 </p>
 
-## Open Source
-This Project is open-source and licensed under the [MIT License](https://github.com/TheBusyBiscuit/MobCapturer/blob/master/LICENSE)
+## :balance_scale: Open Source / License
+This Project is open-source and licensed under the [MIT License](https://github.com/Slimefun-Addon-Community/MobCapturer/blob/master/LICENSE)<br>
+Pull Requests are welcome!
