@@ -4,8 +4,11 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.Optional;
 
-//import org.bstats.bukkit.Metrics;
+import javax.annotation.Nonnull;
+
 import io.github.bakedlibs.dough.updater.GitHubBuildsUpdater;
+
+import org.bstats.bukkit.Metrics;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -51,6 +54,9 @@ import org.bukkit.entity.ZombieHorse;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import io.github.thebusybiscuit.mobcapturer.items.MobCannon;
+import io.github.thebusybiscuit.mobcapturer.items.MobEgg;
+import io.github.thebusybiscuit.mobcapturer.items.MobPellet;
 import io.github.thebusybiscuit.mobcapturer.mobs.AnimalsAdapter;
 import io.github.thebusybiscuit.mobcapturer.mobs.BeeAdapter;
 import io.github.thebusybiscuit.mobcapturer.mobs.CatAdapter;
@@ -88,18 +94,14 @@ import io.github.thebusybiscuit.mobcapturer.mobs.ZoglinAdapter;
 import io.github.thebusybiscuit.mobcapturer.mobs.ZombieAdapter;
 import io.github.thebusybiscuit.mobcapturer.mobs.ZombieVillagerAdapter;
 import io.github.thebusybiscuit.mobcapturer.mobs.ZombifiedPiglinAdapter;
-
-import io.github.thebusybiscuit.mobcapturer.items.MobCannon;
-import io.github.thebusybiscuit.mobcapturer.items.MobEgg;
-import io.github.thebusybiscuit.mobcapturer.items.MobPellet;
 import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
@@ -253,17 +255,20 @@ public class MobCapturer extends JavaPlugin implements SlimefunAddon {
     }
 
     @Override
+    @Nonnull
     public String getBugTrackerURL() {
         return "https://github.com/SlimeTraditionalTranslation/MobCapturer/issues";
     }
 
     @Override
+    @Nonnull
     public JavaPlugin getJavaPlugin() {
         return this;
     }
 
+    @Nonnull
     @SuppressWarnings({"unchecked", "rawtypes"})
-    public Optional<ItemStack> capture(LivingEntity entity) {
+    public Optional<ItemStack> capture(@Nonnull LivingEntity entity) {
         MobEgg egg = adapters.get(entity.getType());
 
         if (egg != null) {
