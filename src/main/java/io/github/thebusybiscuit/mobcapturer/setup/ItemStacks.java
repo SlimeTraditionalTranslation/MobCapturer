@@ -9,7 +9,7 @@ import org.bukkit.entity.EntityType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.commons.lang.Validate;
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
-
+import static io.github.thebusybiscuit.mobcapturer.utils.TranslateTR.TranslateMobName;
 /**
  * All the {@link SlimefunItemStack}s in MobCapturer.
  *
@@ -44,7 +44,7 @@ public final class ItemStacks {
         return new SlimefunItemStack(
             "MOB_EGG_" + type,
             eggTexture,
-            "&a生物球 &7(" + ChatUtils.humanize(type.toString()) + ")",
+            "&a生物球 &7(" + TranslateMobName(ChatUtils.humanize(type.toString())) + ")",
             "",
             "&7右鍵此物品在方塊上",
             "&7來釋放你捕捉的生物"

@@ -19,7 +19,7 @@ public final class RecipeTypes {
             ItemStacks.MOB_CANNON,
             "&6生物捕捉槍",
             "&7使用 &6生物捕捉槍",
-            "&7來抓指令生物."
+            "&7來抓指定生物."
         )
     );
 
