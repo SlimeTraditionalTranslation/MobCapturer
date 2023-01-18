@@ -19,6 +19,14 @@
 | 點下方圖片下載 | 點下方圖片下載 |
 | [![Build Status](https://xMikux.github.io/builds/SlimeTraditionalTranslation/MobCapturer/master/badge.svg)](https://xMikux.github.io/builds/SlimeTraditionalTranslation/MobCapturer/master) | [![Build Status](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master/badge.svg)](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master) |
 
+## :gear: 設定
+你可以在 `config.yml` 中修改設定:
+
+- `options.auto-update`: 啟用來自建構的自動更新. (預設: `true`)
+- `options.capture-named-mobs`: 允許玩家捕捉具有自訂名稱的生物. (預設: `true`)
+- `options.ignored-mobs`: 不該捕捉的生物名稱清單.
+  注意: 當 `options.capture-named-mobs` 設定成 `false` 時,該清單將被忽略
+
 ## :headphones: Discord 伺服器
 你可以在Discord上找到Slimefun的社區,並與千名的其他成員建立聯繫.<br>
 Slimefun Addon社區也有自己的discord伺服器來給任何我們的專案!
