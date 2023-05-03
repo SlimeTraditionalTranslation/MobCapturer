@@ -12,6 +12,8 @@ import org.bukkit.entity.PufferFish;
 
 import io.github.thebusybiscuit.mobcapturer.adapters.MobAdapter;
 
+import org.mini2Dx.gettext.GetText;
+
 public class PufferFishAdapter implements MobAdapter<PufferFish> {
 
     @Nonnull
@@ -19,7 +21,7 @@ public class PufferFishAdapter implements MobAdapter<PufferFish> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = MobAdapter.super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "膨脹: " + ChatColor.WHITE + json.get("puffState").getAsInt());
+        lore.add(ChatColor.GRAY + GetText.tr("Puffiness: ") + ChatColor.WHITE + json.get("puffState").getAsInt());
 
         return lore;
     }

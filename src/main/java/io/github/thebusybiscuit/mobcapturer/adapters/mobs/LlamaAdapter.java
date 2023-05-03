@@ -13,6 +13,8 @@ import org.bukkit.entity.Llama.Color;
 
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class LlamaAdapter<T extends Llama> extends ChestedHorseAdapter<T> {
 
     public LlamaAdapter(@Nonnull Class<T> entityClass) {
@@ -24,7 +26,7 @@ public class LlamaAdapter<T extends Llama> extends ChestedHorseAdapter<T> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "顏色: " + ChatColor.WHITE + ChatUtils.humanize(json.get("color").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Color: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("color").getAsString()));
 
         return lore;
     }

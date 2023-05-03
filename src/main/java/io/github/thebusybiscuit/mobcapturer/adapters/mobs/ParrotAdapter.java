@@ -13,6 +13,8 @@ import org.bukkit.entity.Parrot.Variant;
 
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class ParrotAdapter extends AbstractTameableAdapter<Parrot> {
 
     public ParrotAdapter() {
@@ -24,10 +26,10 @@ public class ParrotAdapter extends AbstractTameableAdapter<Parrot> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "品種: " + ChatColor.WHITE + ChatUtils.humanize(json.get("variant").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Variant: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("variant").getAsString()));
 
         if (!json.get("ownerUUID").isJsonNull()) {
-            lore.add(ChatColor.GRAY + "坐著: " + ChatColor.WHITE + json.get("sitting").getAsBoolean());
+            lore.add(ChatColor.GRAY + GetText.tr("Sitting: ") + ChatColor.WHITE + json.get("sitting").getAsBoolean());
         }
 
         return lore;

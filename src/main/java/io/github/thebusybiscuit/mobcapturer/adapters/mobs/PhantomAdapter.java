@@ -12,6 +12,8 @@ import org.bukkit.entity.Phantom;
 
 import io.github.thebusybiscuit.mobcapturer.adapters.MobAdapter;
 
+import org.mini2Dx.gettext.GetText;
+
 public class PhantomAdapter implements MobAdapter<Phantom> {
 
     @Nonnull
@@ -19,7 +21,7 @@ public class PhantomAdapter implements MobAdapter<Phantom> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = MobAdapter.super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "大小: " + ChatColor.WHITE + (json.get("size").getAsInt() + 1));
+        lore.add(ChatColor.GRAY + GetText.tr("Size: ") + ChatColor.WHITE + (json.get("size").getAsInt() + 1));
 
         return lore;
     }

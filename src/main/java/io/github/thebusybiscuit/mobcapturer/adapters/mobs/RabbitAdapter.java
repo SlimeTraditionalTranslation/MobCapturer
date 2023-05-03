@@ -13,6 +13,8 @@ import org.bukkit.entity.Rabbit.Type;
 
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class RabbitAdapter extends AnimalsAdapter<Rabbit> {
 
     public RabbitAdapter() {
@@ -24,7 +26,7 @@ public class RabbitAdapter extends AnimalsAdapter<Rabbit> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "品種: " + ChatColor.WHITE + ChatUtils.humanize(json.get("rabbitType").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Variant: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("rabbitType").getAsString()));
 
         return lore;
     }

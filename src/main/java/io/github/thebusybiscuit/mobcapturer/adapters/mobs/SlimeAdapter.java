@@ -12,6 +12,8 @@ import org.bukkit.entity.Slime;
 
 import io.github.thebusybiscuit.mobcapturer.adapters.MobAdapter;
 
+import org.mini2Dx.gettext.GetText;
+
 public class SlimeAdapter<T extends Slime> implements MobAdapter<T> {
 
     private final Class<T> entityClass;
@@ -25,7 +27,7 @@ public class SlimeAdapter<T extends Slime> implements MobAdapter<T> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = MobAdapter.super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "大小: " + ChatColor.WHITE + json.get("size").getAsInt());
+        lore.add(ChatColor.GRAY + GetText.tr("Size: ") + ChatColor.WHITE + json.get("size").getAsInt());
 
         return lore;
     }

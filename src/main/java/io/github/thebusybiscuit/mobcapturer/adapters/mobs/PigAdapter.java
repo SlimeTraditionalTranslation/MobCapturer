@@ -9,6 +9,7 @@ import com.google.gson.JsonObject;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Pig;
+import org.mini2Dx.gettext.GetText;
 
 public class PigAdapter extends AnimalsAdapter<Pig> {
 
@@ -22,7 +23,7 @@ public class PigAdapter extends AnimalsAdapter<Pig> {
         List<String> lore = super.getLore(json);
 
         if (json.get("saddle").getAsBoolean()) {
-            lore.add(ChatColor.GRAY + "+ 馬鞍");
+            lore.add(ChatColor.GRAY + GetText.tr("+ Saddle"));
         }
 
         return lore;

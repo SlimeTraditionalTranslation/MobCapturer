@@ -16,6 +16,8 @@ import org.bukkit.inventory.ItemStack;
 import io.github.thebusybiscuit.mobcapturer.adapters.InventoryAdapter;
 import io.github.thebusybiscuit.slimefun4.utils.NumberUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 class AbstractHorseAdapter<T extends AbstractHorse> extends AbstractTameableAdapter<T> implements InventoryAdapter<T> {
 
     public AbstractHorseAdapter(@Nonnull Class<T> entityClass) {
@@ -27,7 +29,7 @@ class AbstractHorseAdapter<T extends AbstractHorse> extends AbstractTameableAdap
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "跳躍力量: " + ChatColor.WHITE + NumberUtils.roundDecimalNumber(json.get("jumpStrength").getAsDouble()));
+        lore.add(ChatColor.GRAY + GetText.tr("Jump Strength: ") + ChatColor.WHITE + NumberUtils.roundDecimalNumber(json.get("jumpStrength").getAsDouble()));
 
         return lore;
     }

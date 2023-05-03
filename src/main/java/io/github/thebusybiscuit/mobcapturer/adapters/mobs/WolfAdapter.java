@@ -13,6 +13,8 @@ import org.bukkit.entity.Wolf;
 
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class WolfAdapter extends AbstractTameableAdapter<Wolf> {
 
     public WolfAdapter() {
@@ -25,10 +27,10 @@ public class WolfAdapter extends AbstractTameableAdapter<Wolf> {
         List<String> lore = super.getLore(json);
 
         if (!json.get("ownerUUID").isJsonNull()) {
-            lore.add(ChatColor.GRAY + "項圈顏色: " + ChatColor.WHITE + ChatUtils.humanize(json.get("collarColor").getAsString()));
-            lore.add(ChatColor.GRAY + "坐著: " + ChatColor.WHITE + json.get("sitting").getAsBoolean());
+            lore.add(ChatColor.GRAY + GetText.tr("Collar Color: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("collarColor").getAsString()));
+            lore.add(ChatColor.GRAY + GetText.tr("Sitting: ") + ChatColor.WHITE + json.get("sitting").getAsBoolean());
         } else {
-            lore.add(ChatColor.GRAY + "生氣: " + ChatColor.WHITE + json.get("angry").getAsBoolean());
+            lore.add(ChatColor.GRAY + GetText.tr("Angry: ") + ChatColor.WHITE + json.get("angry").getAsBoolean());
         }
 
         return lore;

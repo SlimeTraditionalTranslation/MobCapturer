@@ -13,6 +13,8 @@ import org.bukkit.entity.Panda.Gene;
 
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class PandaAdapter extends AnimalsAdapter<Panda> {
 
     public PandaAdapter() {
@@ -24,8 +26,8 @@ public class PandaAdapter extends AnimalsAdapter<Panda> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "主要基因: " + ChatColor.WHITE + ChatUtils.humanize(json.get("mainGene").getAsString()));
-        lore.add(ChatColor.GRAY + "隱藏基因: " + ChatColor.WHITE + ChatUtils.humanize(json.get("hiddenGene").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Main Gene: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("mainGene").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Hidden Gene: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("hiddenGene").getAsString()));
 
         return lore;
     }

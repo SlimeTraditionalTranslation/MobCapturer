@@ -10,6 +10,8 @@ import io.github.thebusybiscuit.slimefun4.api.items.groups.SubItemGroup;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 /**
  * All the {@link ItemGroup}s in MobCapturer.
  *
@@ -21,7 +23,7 @@ public final class ItemGroups {
         new NamespacedKey(MobCapturer.getInstance(), "mob_capturer"),
         new CustomItemStack(
             SlimefunUtils.getCustomHead("d429ff1d2015cb11398471bb2f895f7b4c3ccec201e4ad7a86ff24b744878c"),
-            "&d生物捕捉器"
+            GetText.tr("&dMob Capturer")
         )
     );
     public static final SubItemGroup TOOLS = new SubItemGroup(
@@ -29,7 +31,7 @@ public final class ItemGroups {
         MAIN,
         new CustomItemStack(
             Material.BLAZE_ROD,
-            "&d工具"
+            GetText.tr("&dTools")
         )
     );
     public static final SubItemGroup MOB_EGGS = new SubItemGroup(
@@ -37,7 +39,7 @@ public final class ItemGroups {
         MAIN,
         new CustomItemStack(
             Material.CHICKEN_SPAWN_EGG,
-            "&a生物球"
+            GetText.tr("&aMob Eggs")
         )
     );
 

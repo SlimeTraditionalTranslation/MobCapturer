@@ -9,6 +9,7 @@ import com.google.gson.JsonObject;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.PiglinAbstract;
+import org.mini2Dx.gettext.GetText;
 
 class AbstractPiglinAdapter<T extends PiglinAbstract> extends AbstractHumanoidAdapter<T> {
 
@@ -21,7 +22,7 @@ class AbstractPiglinAdapter<T extends PiglinAbstract> extends AbstractHumanoidAd
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "幼崽: " + ChatColor.WHITE + json.get("baby").getAsBoolean());
+        lore.add(ChatColor.GRAY + GetText.tr("Baby: ") + ChatColor.WHITE + json.get("baby").getAsBoolean());
 
         return lore;
     }

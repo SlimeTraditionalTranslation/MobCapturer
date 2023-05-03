@@ -12,6 +12,8 @@ import org.bukkit.entity.Vex;
 
 import io.github.thebusybiscuit.mobcapturer.adapters.MobAdapter;
 
+import org.mini2Dx.gettext.GetText;
+
 public class VexAdapter implements MobAdapter<Vex> {
 
     @Nonnull
@@ -19,7 +21,7 @@ public class VexAdapter implements MobAdapter<Vex> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = MobAdapter.super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "準備攻擊: " + ChatColor.WHITE + json.get("charging").getAsBoolean());
+        lore.add(ChatColor.GRAY + GetText.tr("Charging: ") + ChatColor.WHITE + json.get("charging").getAsBoolean());
 
         return lore;
     }

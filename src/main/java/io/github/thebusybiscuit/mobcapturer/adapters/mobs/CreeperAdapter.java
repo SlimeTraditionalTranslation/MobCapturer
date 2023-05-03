@@ -12,6 +12,8 @@ import org.bukkit.entity.Creeper;
 
 import io.github.thebusybiscuit.mobcapturer.adapters.MobAdapter;
 
+import org.mini2Dx.gettext.GetText;
+
 public class CreeperAdapter implements MobAdapter<Creeper> {
 
     @Nonnull
@@ -19,7 +21,7 @@ public class CreeperAdapter implements MobAdapter<Creeper> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = MobAdapter.super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "充能: " + ChatColor.WHITE + json.get("powered").getAsBoolean());
+        lore.add(ChatColor.GRAY + GetText.tr("Powered: ") + ChatColor.WHITE + json.get("powered").getAsBoolean());
 
         return lore;
     }

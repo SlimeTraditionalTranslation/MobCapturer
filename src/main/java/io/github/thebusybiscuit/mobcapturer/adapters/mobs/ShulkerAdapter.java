@@ -15,6 +15,8 @@ import org.bukkit.entity.Shulker;
 import io.github.thebusybiscuit.mobcapturer.adapters.MobAdapter;
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class ShulkerAdapter implements MobAdapter<Shulker> {
 
     @Nonnull
@@ -25,7 +27,7 @@ public class ShulkerAdapter implements MobAdapter<Shulker> {
         JsonElement color = json.get("color");
 
         if (!color.isJsonNull()) {
-            lore.add(ChatColor.GRAY + "顏色: " + ChatColor.WHITE + ChatUtils.humanize(color.getAsString()));
+            lore.add(ChatColor.GRAY + GetText.tr("Color: ") + ChatColor.WHITE + ChatUtils.humanize(color.getAsString()));
         }
 
         return lore;

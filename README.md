@@ -1,35 +1,47 @@
 # :ghost: 生物捕捉器
-黏液科技的附加 繁體翻譯版
 
-此附加靈感來自[MineFactory Reloaded](https://www.curseforge.com/minecraft/mc-mods/minefactory-reloaded)中的捕捉球.
+生物捕捉器是 Slimefun4 的附加，新增了捕捉槍讓你可以捕捉生物。<br>
+這個附加深受著名的模組 [MineFactory Reloaded](https://www.curseforge.com/minecraft/mc-mods/minefactory-reloaded) 的大師球物品。
 
-來捕捉生物, 簡單合成生物捕捉槍與一些生物捕捉球.<br>
-瞄準發射任何生物.
+要來捕捉一隻生物，先製作個生物捕捉槍還有一些生物捕捉球。<br>
+瞄準好，射擊任何生物！
 
-目前只有一些生物實際與此附加兼容.<br>
-但是生物還是能運作得非常好!<br>
-被捕捉的生物將保留屬性,藥水效果,燃燒狀態,自訂名稱,它們的血量, 甚至特定生物特徵,例如羊毛顏色等等.
+目前只有一些生物實際與此附加相容。<br>
+但生物仍然運作的非常好！<br>
+被捕捉的生物將保留屬性、藥水效果、燃燒時間、自訂名稱和它們的血量，甚至像是羊毛顏色和更多等等的生物特徵。
 
-> 此為**非官方**版本, 請勿在該作者問題追蹤內回報! <br>
-> [原作連結](https://github.com/TheBusyBiscuit/MobCapturer) | [非官方Discord](https://discord.gg/GF4CwjFXT9)
+> 此為**非官方**的黏液科技繁體翻譯版
+>
+> 請勿在該作者的問題追蹤中回報有關此的任何錯誤！
+>
+> 如果使用本翻譯遇到錯誤、翻譯用法奇怪或其他等等的問題
+>
+> 請加入非官方的 [Slimefun 繁體中文版][TraditionalChinese-DiscordLink] Discord 伺服器一起討論！
 
 ## :floppy_disk: 下載生物捕捉器
-| 非官方繁體中文版 | 官方英文版 |
+
+| 繁體中文版 | 官方英文版 |
 | -------- | -------- |
-| 點下方圖片下載 | 點下方圖片下載 |
-| [![Build Status](https://xMikux.github.io/builds/SlimeTraditionalTranslation/MobCapturer/master/badge.svg)](https://xMikux.github.io/builds/SlimeTraditionalTranslation/MobCapturer/master) | [![Build Status](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master/badge.svg)](https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master) |
+| [![Build Status][TraditionalChinese-Badge]][TraditionalChinese-Link] | [![Build Status][Official-Badge]][Official-Link] |
+
+[TraditionalChinese-Badge]: https://xMikux.github.io/builds/SlimeTraditionalTranslation/MobCapturer/master/badge.svg
+[TraditionalChinese-Link]: https://xMikux.github.io/builds/SlimeTraditionalTranslation/MobCapturer/master
+[TraditionalChinese-DiscordLink]: https://discord.gg/GF4CwjFXT9
+[Official-Badge]: https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master/badge.svg
+[Official-Link]: https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master
+
 
 ## :gear: 設定
-你可以在 `config.yml` 中修改設定:
+你可以在 `config.yml` 中修改設定：
 
-- `options.auto-update`: 啟用來自建構的自動更新. (預設: `true`)
-- `options.capture-named-mobs`: 允許玩家捕捉具有自訂名稱的生物. (預設: `true`)
-- `options.ignored-mobs`: 不該捕捉的生物名稱清單.
-  注意: 當 `options.capture-named-mobs` 設定成 `false` 時,該清單將被忽略
+- `options.auto-update`：啟用自動更新。（預設：`true`）
+- `options.capture-named-mobs`：允許玩家捕捉有自訂名稱的生物。（預設：`true`）
+- `options.ignored-mobs`：不應該捕捉的生物名稱清單。   
+  備註：這個清單將在 `options.capture-named-mobs` 設定為 `false` 時被忽略
 
 ## :headphones: Discord 伺服器
-你可以在Discord上找到Slimefun的社區,並與千名的其他成員建立聯繫.<br>
-Slimefun Addon社區也有自己的discord伺服器來給任何我們的專案!
+你可以在 Discord 找到 Slimefun 社群，並連接與數千名社群人一起。<br>
+Slimefun Addon 社群也有自己的 Discord 伺服器，來提供給我們自己的專案！
 
 <p align="center">
   <a href="https://discord.gg/slimefun">

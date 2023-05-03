@@ -22,6 +22,8 @@ import org.bukkit.inventory.ItemStack;
 import io.github.thebusybiscuit.mobcapturer.adapters.InventoryAdapter;
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class FoxAdapter extends AnimalsAdapter<Fox> implements InventoryAdapter<Fox> {
 
     public FoxAdapter() {
@@ -33,13 +35,13 @@ public class FoxAdapter extends AnimalsAdapter<Fox> implements InventoryAdapter<
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "品種: " + ChatColor.WHITE + ChatUtils.humanize(json.get("foxType").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Variant: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("foxType").getAsString()));
         if (json.get("crouching").getAsBoolean()) {
-            lore.add(ChatColor.GRAY + "蹲著: " + ChatColor.WHITE + json.get("crouching").getAsBoolean());
+            lore.add(ChatColor.GRAY + GetText.tr("Crouching: ") + ChatColor.WHITE + json.get("crouching").getAsBoolean());
         } else if (json.get("sitting").getAsBoolean()) {
-            lore.add(ChatColor.GRAY + "坐著: " + ChatColor.WHITE + json.get("sitting").getAsBoolean());
+            lore.add(ChatColor.GRAY + GetText.tr("Sitting: ") + ChatColor.WHITE + json.get("sitting").getAsBoolean());
         } else if (json.get("sleeping").getAsBoolean()) {
-            lore.add(ChatColor.GRAY + "睡覺: " + ChatColor.WHITE + json.get("sleeping").getAsBoolean());
+            lore.add(ChatColor.GRAY + GetText.tr("Sleeping: ") + ChatColor.WHITE + json.get("sleeping").getAsBoolean());
         }
 
 
@@ -47,9 +49,9 @@ public class FoxAdapter extends AnimalsAdapter<Fox> implements InventoryAdapter<
         JsonElement secondElement = json.get("secondTrustedPlayerName");
         if (!firstElement.isJsonNull()) {
             if (secondElement.isJsonNull()) {
-                lore.add(ChatColor.GRAY + "信任著玩家: " + ChatColor.WHITE + firstElement.getAsString());
+                lore.add(ChatColor.GRAY + GetText.tr("Trusted Player: ") + ChatColor.WHITE + firstElement.getAsString());
             } else {
-                lore.add(ChatColor.GRAY + "信任著玩家: " + ChatColor.WHITE + firstElement.getAsString() + ", " + secondElement.getAsString());
+                lore.add(ChatColor.GRAY + GetText.tr("Trusted Players: ") + ChatColor.WHITE + firstElement.getAsString() + ", " + secondElement.getAsString());
             }
         }
 

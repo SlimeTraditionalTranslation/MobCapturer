@@ -14,6 +14,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Animals;
 import org.bukkit.entity.Tameable;
+import org.mini2Dx.gettext.GetText;
 
 class AbstractTameableAdapter<T extends Animals & Tameable> extends AnimalsAdapter<T> {
 
@@ -29,7 +30,7 @@ class AbstractTameableAdapter<T extends Animals & Tameable> extends AnimalsAdapt
         JsonElement element = json.get("ownerName");
 
         if (!element.isJsonNull()) {
-            lore.add(ChatColor.GRAY + "主人: " + ChatColor.WHITE + element.getAsString());
+            lore.add(ChatColor.GRAY + GetText.tr("Owner: ") + ChatColor.WHITE + element.getAsString());
         }
 
         return lore;

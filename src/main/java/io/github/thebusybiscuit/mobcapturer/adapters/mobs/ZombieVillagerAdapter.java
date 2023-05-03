@@ -16,6 +16,8 @@ import org.bukkit.entity.ZombieVillager;
 
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class ZombieVillagerAdapter extends ZombieAdapter<ZombieVillager> {
 
     public ZombieVillagerAdapter() {
@@ -27,7 +29,7 @@ public class ZombieVillagerAdapter extends ZombieAdapter<ZombieVillager> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "職業: " + ChatColor.WHITE + ChatUtils.humanize(json.get("profession").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Profession: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("profession").getAsString()));
 
         return lore;
     }

@@ -12,6 +12,8 @@ import org.bukkit.entity.Animals;
 
 import io.github.thebusybiscuit.mobcapturer.adapters.MobAdapter;
 
+import org.mini2Dx.gettext.GetText;
+
 public class AnimalsAdapter<T extends Animals> implements MobAdapter<T> {
 
     private final Class<T> entityClass;
@@ -25,7 +27,7 @@ public class AnimalsAdapter<T extends Animals> implements MobAdapter<T> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = MobAdapter.super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "幼崽: " + ChatColor.WHITE + json.get("baby").getAsBoolean());
+        lore.add(ChatColor.GRAY + GetText.tr("Baby: ") + ChatColor.WHITE + json.get("baby").getAsBoolean());
 
         return lore;
     }

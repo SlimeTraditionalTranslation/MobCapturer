@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.thebusybiscuit</groupId>
     <artifactId>MobCapturer</artifactId>
-    <version>1.0 Efina</version>
+    <version>Efina_1.0</version>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
@@ -39,6 +39,7 @@
                 <filtering>true</filtering>
                 <includes>
                     <include>*</include>
+                    <include>translations/*.po</include>
                 </includes>
             </resource>
 
@@ -131,8 +132,19 @@
         <dependency>
             <groupId>com.github.SlimeTraditionalTranslation</groupId>
             <artifactId>dough</artifactId>
-            <version>7142669</version>
+            <version>02b9258298</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.SlimeTraditionalTranslation</groupId>
+            <artifactId>Locale-API</artifactId>
+            <version>v1.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mini2Dx</groupId>
+            <artifactId>gettext-lib</artifactId>
+            <version>1.11.0</version>
         </dependency>
     </dependencies>
 </project>

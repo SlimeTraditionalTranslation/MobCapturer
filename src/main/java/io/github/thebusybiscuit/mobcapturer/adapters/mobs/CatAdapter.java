@@ -14,6 +14,8 @@ import org.bukkit.entity.Cat.Type;
 
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class CatAdapter extends AbstractTameableAdapter<Cat> {
 
     public CatAdapter() {
@@ -25,11 +27,11 @@ public class CatAdapter extends AbstractTameableAdapter<Cat> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "品種: " + ChatColor.WHITE + ChatUtils.humanize(json.get("catType").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Variant: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("catType").getAsString()));
 
         if (!json.get("ownerUUID").isJsonNull()) {
-            lore.add(ChatColor.GRAY + "項圈顏色: " + ChatColor.WHITE + ChatUtils.humanize(json.get("collarColor").getAsString()));
-            lore.add(ChatColor.GRAY + "坐著: " + ChatColor.WHITE + json.get("sitting").getAsBoolean());
+            lore.add(ChatColor.GRAY + GetText.tr("Collar Color: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("collarColor").getAsString()));
+            lore.add(ChatColor.GRAY + GetText.tr("Sitting: ") + ChatColor.WHITE + json.get("sitting").getAsBoolean());
         }
 
         return lore;

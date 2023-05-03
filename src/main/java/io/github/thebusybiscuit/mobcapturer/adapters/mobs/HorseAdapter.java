@@ -16,6 +16,8 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class HorseAdapter extends AbstractHorseAdapter<Horse> {
 
     public HorseAdapter() {
@@ -27,8 +29,8 @@ public class HorseAdapter extends AbstractHorseAdapter<Horse> {
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "樣式: " + ChatColor.WHITE + ChatUtils.humanize(json.get("style").getAsString()));
-        lore.add(ChatColor.GRAY + "顏色: " + ChatColor.WHITE + ChatUtils.humanize(json.get("color").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Style: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("style").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Color: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("color").getAsString()));
 
         return lore;
     }

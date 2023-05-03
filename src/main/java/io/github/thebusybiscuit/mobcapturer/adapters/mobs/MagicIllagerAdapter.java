@@ -13,6 +13,8 @@ import org.bukkit.entity.Spellcaster.Spell;
 
 import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 public class MagicIllagerAdapter<T extends Spellcaster> extends RaiderAdapter<T> {
 
     public MagicIllagerAdapter(@Nonnull Class<T> entityClass) {
@@ -24,7 +26,7 @@ public class MagicIllagerAdapter<T extends Spellcaster> extends RaiderAdapter<T>
     public List<String> getLore(@Nonnull JsonObject json) {
         List<String> lore = super.getLore(json);
 
-        lore.add(ChatColor.GRAY + "幻術時間: " + ChatColor.WHITE + ChatUtils.humanize(json.get("spell").getAsString()));
+        lore.add(ChatColor.GRAY + GetText.tr("Spell: ") + ChatColor.WHITE + ChatUtils.humanize(json.get("spell").getAsString()));
 
         return lore;
     }

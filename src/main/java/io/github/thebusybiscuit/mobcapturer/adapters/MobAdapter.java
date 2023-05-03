@@ -28,6 +28,8 @@ import org.bukkit.potion.PotionEffectType;
 
 import io.github.thebusybiscuit.slimefun4.utils.NumberUtils;
 
+import org.mini2Dx.gettext.GetText;
+
 /**
  * This is a simple Adapter that allows conversion between a {@link LivingEntity} and
  * a {@link JsonObject}.
@@ -51,16 +53,16 @@ public interface MobAdapter<T extends LivingEntity> extends PersistentDataType<S
         List<String> lore = new LinkedList<>();
 
         lore.add("");
-        lore.add(ChatColor.GRAY + "血量: " + ChatColor.GREEN + NumberUtils.roundDecimalNumber(json.get("_health").getAsDouble()));
+        lore.add(ChatColor.GRAY + GetText.tr("Health: ") + ChatColor.GREEN + NumberUtils.roundDecimalNumber(json.get("_health").getAsDouble()));
 
         if (!json.get("_customName").isJsonNull()) {
-            lore.add(ChatColor.GRAY + "名稱: " + ChatColor.RESET + json.get("_customName").getAsString());
+            lore.add(ChatColor.GRAY + GetText.tr("Name: ") + ChatColor.RESET + json.get("_customName").getAsString());
         }
 
         int fireTicks = json.get("_fireTicks").getAsInt();
 
         if (fireTicks > 0) {
-            lore.add(ChatColor.GRAY + "著火: " + ChatColor.RESET + "true");
+            lore.add(ChatColor.GRAY + GetText.tr("On Fire: ") + ChatColor.RESET + "true");
         }
 
         return lore;
