@@ -2,9 +2,11 @@ package io.github.thebusybiscuit.mobcapturer;
 
 import javax.annotation.Nonnull;
 
+import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import io.github.thebusybiscuit.mobcapturer.listeners.MobCaptureListener;
 import io.github.thebusybiscuit.mobcapturer.listeners.PelletListener;
 import io.github.thebusybiscuit.mobcapturer.setup.Registry;
 import io.github.thebusybiscuit.mobcapturer.setup.Setup;
@@ -58,14 +60,18 @@ public class MobCapturer extends JavaPlugin implements SlimefunAddon {
         GetText.setLocale(java.util.Locale.TRADITIONAL_CHINESE);
         InputStream inputStream = getClass().getResourceAsStream("/translations/zh_tw.po");
         if (inputStream == null) {
-            getLogger().warning("無法找到翻譯檔案！");
+            getLogger().severe("錯誤！無法找到翻譯檔案，請回報給翻譯者。");
+            getServer().getPluginManager().disablePlugin(this);
+            return;
         } else {
             getLogger().info("載入繁體翻譯檔案...");
             try {
                 PoFile poFile = new PoFile(java.util.Locale.TRADITIONAL_CHINESE, inputStream);
                 GetText.add(poFile);
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (ParseCancellationException | IOException e) {
+                getLogger().severe("錯誤！讀取翻譯時發生錯誤，請回報給翻譯者：" + e.getMessage());
+                getServer().getPluginManager().disablePlugin(this);
+                return;
             }
         }
 
@@ -73,7 +79,9 @@ public class MobCapturer extends JavaPlugin implements SlimefunAddon {
 
         Setup.setup();
 
+        // listeners
         new PelletListener(this);
+        new MobCaptureListener(this);
     }
 
     @Override

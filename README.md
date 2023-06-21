@@ -30,11 +30,11 @@
 [Official-Badge]: https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master/badge.svg
 [Official-Link]: https://thebusybiscuit.github.io/builds/TheBusyBiscuit/MobCapturer/master
 
-
 ## :gear: 設定
 你可以在 `config.yml` 中修改設定：
 
 - `options.auto-update`：啟用自動更新。（預設：`true`）
+- `options.mob-eggs-to-inventory`: 允許生物球直接放入到玩家背包中。如果玩家背包是滿的，則會掉落在玩家的所在位置。（預設：`false`）
 - `options.capture-named-mobs`：允許玩家捕捉有自訂名稱的生物。（預設：`true`）
 - `options.ignored-mobs`：不應該捕捉的生物名稱清單。   
   備註：這個清單將在 `options.capture-named-mobs` 設定為 `false` 時被忽略
