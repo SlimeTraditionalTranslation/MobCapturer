@@ -132,7 +132,7 @@
         <dependency>
             <groupId>com.github.SlimeTraditionalTranslation</groupId>
             <artifactId>dough</artifactId>
-            <version>02b9258298</version>
+            <version>v1.0.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

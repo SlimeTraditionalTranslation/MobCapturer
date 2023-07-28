@@ -19,6 +19,7 @@ import org.mini2Dx.gettext.PoFile;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Locale;
 
 /**
  * MobCapturer Slimefun addon
@@ -53,11 +54,11 @@ public class MobCapturer extends JavaPlugin implements SlimefunAddon {
         Config cfg = new Config(this);
         new Metrics(this, 6672);
 
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("EFI - ")) {
+        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("Build_STCT - ")) {
             new GitHubBuildsUpdaterTR(this, getFile(), "SlimeTraditionalTranslation/MobCapturer/master").start();
         }
 
-        GetText.setLocale(java.util.Locale.TRADITIONAL_CHINESE);
+        GetText.setLocale(Locale.TRADITIONAL_CHINESE);
         InputStream inputStream = getClass().getResourceAsStream("/translations/zh_tw.po");
         if (inputStream == null) {
             getLogger().severe("錯誤！無法找到翻譯檔案，請回報給翻譯者。");
@@ -66,7 +67,7 @@ public class MobCapturer extends JavaPlugin implements SlimefunAddon {
         } else {
             getLogger().info("載入繁體翻譯檔案...");
             try {
-                PoFile poFile = new PoFile(java.util.Locale.TRADITIONAL_CHINESE, inputStream);
+                PoFile poFile = new PoFile(Locale.TRADITIONAL_CHINESE, inputStream);
                 GetText.add(poFile);
             } catch (ParseCancellationException | IOException e) {
                 getLogger().severe("錯誤！讀取翻譯時發生錯誤，請回報給翻譯者：" + e.getMessage());
