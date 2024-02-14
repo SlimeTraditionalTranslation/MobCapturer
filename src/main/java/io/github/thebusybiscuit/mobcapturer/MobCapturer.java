@@ -12,7 +12,7 @@ import io.github.thebusybiscuit.mobcapturer.setup.Registry;
 import io.github.thebusybiscuit.mobcapturer.setup.Setup;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
-import io.github.bakedlibs.dough.updater.GitHubBuildsUpdaterTR;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.BlobBuildUpdater;
 
 import org.mini2Dx.gettext.GetText;
 import org.mini2Dx.gettext.PoFile;
@@ -54,8 +54,8 @@ public class MobCapturer extends JavaPlugin implements SlimefunAddon {
         Config cfg = new Config(this);
         new Metrics(this, 6672);
 
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("Build_STCT - ")) {
-            new GitHubBuildsUpdaterTR(this, getFile(), "SlimeTraditionalTranslation/MobCapturer/master").start();
+        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("Dev - ")) {
+            new BlobBuildUpdater(this, getFile(), "MobCapturer").start();
         }
 
         GetText.setLocale(Locale.TRADITIONAL_CHINESE);
